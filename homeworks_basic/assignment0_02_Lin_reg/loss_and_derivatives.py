@@ -87,7 +87,7 @@ class LossAndDerivatives:
         """
 
         # YOUR CODE HERE
-        return (X.T.dot(X.dot(w) - Y)) / (2 * Y.shape[0])
+        return 2*(X.T.dot(X.dot(w) - Y)) / (Y.size)
 
     @staticmethod
     def mae_derivative(X, Y, w):
