@@ -106,10 +106,7 @@ class LossAndDerivatives:
         """
 
         # YOUR CODE HERE
-        return np.array([
-            [0.19708867, 0.19621798, 0.19621798, 0.19572906],
-            [0.25574138, 0.25524507, 0.25524507, 0.25406404]
-        ])
+        return ((X.T.dot(np.sign(X.dot(w) - Y)))) / (Y.size)
 
     @staticmethod
     def l2_reg_derivative(w):
