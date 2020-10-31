@@ -102,7 +102,7 @@ class SVM(BaseEstimator, ClassifierMixin):
             batch = torch.from_numpy(batch).float()
             K = self.kernel_function(batch, self.X)
             # compute the margin values for every object in the batch
-            return ### YOUR CODE HERE
+            return (self._a_support_vector * self._y_support_vector).dot(kernel) + self
 
     def predict(self, batch):
         scores = self.predict_scores(batch)
